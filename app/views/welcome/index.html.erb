@@ -51,12 +51,12 @@
           draggable: true,
           map: map
         });
-        if ('key' in myObj){
+        if (code in flights_marker){
           var flight = flights_marker[code]
           flight.setPosition(new google.maps.LatLng(pos[0],pos[1]));
         }else{
           socket.emit('FLIGHTS');
-        }
+        };
         
 
 
